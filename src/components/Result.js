@@ -1,6 +1,37 @@
 import React from 'react'
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import "./Result.css"
 function Result() {
+
+    const data = [
+        {
+            name: 'Science',
+            uv: 84,
+        },
+        {
+            name: 'Commerce',
+            uv: 30,
+        },
+        {
+            name: 'Arts',
+            uv: 10,
+        }
+    ];
+    const scoreData = [
+        {
+            name: 'Logical',
+            uv: 75,
+        },
+        {
+            name: 'Verbal',
+            uv: 70,
+        },
+        {
+            name: 'Maths',
+            uv: 95,
+        }
+    ];
+
     return (
         <div className="container">
             <h1>Career Guidance Report</h1>
@@ -45,6 +76,28 @@ function Result() {
                 </div>
             </div>
             <div className="chart">
+                <div className="chart-content">
+                    <ResponsiveContainer width="100%" aspect={3}>
+                        <BarChart width={150} height={100} data={data} margin={{
+                            top: 5, bottom: 5
+                        }}>
+                            <Bar dataKey="uv" fill="#8884d8" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                        </BarChart>
+                    </ResponsiveContainer>
+                </div>
+                <div className="chart-content">
+                    <ResponsiveContainer width="100%" aspect={3} className="bar">
+                        <BarChart width={150} height={100} data={scoreData} margin={{
+                            top: 5, bottom: 5
+                        }}>
+                            <Bar dataKey="uv" fill="#eba434" width="10%" />
+                            <XAxis dataKey="name" />
+                            <YAxis markerEnd='100' />
+                        </BarChart>
+                    </ResponsiveContainer>
+                </div>
             </div>
         </div>
     )
