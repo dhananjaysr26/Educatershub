@@ -99,6 +99,23 @@ function Result() {
                     </ResponsiveContainer>
                 </div>
             </div>
+            <div className="top-skill">
+                <div className="skill-card">
+                    <h1>Problem Solving</h1>
+                </div>
+                <div className="skill-card">
+                    <h1>Analytical</h1>
+                </div>
+                <div className="skill-card">
+                    <h1>Research</h1>
+                </div>
+                <div className="skill-card">
+                    <h1>Creativity</h1>
+                </div>
+                <div className="skill-card">
+                    <h1>Leadership</h1>
+                </div>
+            </div>
         </div>
     )
 }
