@@ -1,6 +1,13 @@
 import React from 'react'
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import "./Result.css"
+import "./Result.css";
+import Problempic from "../Assets/undraw_problem_solving_re_4gq3.svg";
+import Analyticpic from "../Assets/undraw_analytics_re_dkf8.svg";
+import Researchpic from "../Assets/undraw_logic_re_nyb4.svg";
+import Creativitypic from "../Assets/undraw_creativity_wqmm.svg";
+import Leaderpic from "../Assets/undraw_powerful_re_frhr.svg";
+import { Progress,ChakraProvider,Box } from "@chakra-ui/react";
+import { Center, Square, Circle } from "@chakra-ui/react"
 function Result() {
 
     const data = [
@@ -31,10 +38,11 @@ function Result() {
             uv: 95,
         }
     ];
+    
 
     return (
         <div className="container">
-            <h1>Career Guidance Report</h1>
+            <h1 className="top-head">Career Guidance Report</h1>
             <div className="score">
                 <div className="score-content-left">
                     <h3>Total Score</h3>
@@ -102,20 +110,71 @@ function Result() {
             <div className="top-skill">
                 <div className="skill-card">
                     <h1>Problem Solving</h1>
+                    <img src={Problempic} alt="image" className="skill-image"/>
+                    <p className="skill-text"> 95/100</p>
                 </div>
                 <div className="skill-card">
                     <h1>Analytical</h1>
+                    <img src={Analyticpic} alt="image" className="skill-image"/>
+                    <p className="skill-text"> 95/100</p>
+
                 </div>
                 <div className="skill-card">
                     <h1>Research</h1>
+                    <img src={Researchpic} alt="image" className="skill-image"/>
+                    <p className="skill-text"> 95/100</p>
                 </div>
                 <div className="skill-card">
                     <h1>Creativity</h1>
+                    <img src={Creativitypic} alt="image" className="skill-image"/>
+                    <p className="skill-text"> 95/100</p>
                 </div>
+               
                 <div className="skill-card">
+               
                     <h1>Leadership</h1>
+                    <img src={Leaderpic} alt="image" className="skill-image"/>
+                    <p className="skill-text"> 95/100</p>
+                    
                 </div>
             </div>
+            <div className="progress-skill">
+                <div className="progress-card">
+                    <p>Best Carrer For You!</p>
+                    <ChakraProvider >
+                        <Box>
+                            <h2>Engineering</h2>
+                            <Progress hasStripe value={84} />
+                        </Box>
+                        <Box>
+                        <h2>Medical Science</h2>
+                        <Progress hasStripe value={44} />
+                        </Box>
+                        <Box>
+                        <h2>Doctor</h2>
+                        <Progress hasStripe value={24} />
+                        </Box>
+                        <Box>
+                        <h2>CA</h2>
+                        <Progress hasStripe value={34} />
+                        </Box>
+                        <Box>
+                        <h2>Lowyer</h2>
+                        <Progress hasStripe value={14} />
+                        </Box>
+                        <Box>
+                        <h2>Civil Services</h2>
+                        <Progress hasStripe value={64} />
+                        </Box>
+                    </ChakraProvider>
+                    
+                </div>
+            </div>
+            
+            <Center bg="tomato" h="100px" color="white">
+  Thank You!
+</Center>
+
         </div>
     )
 }
