@@ -16,10 +16,12 @@ h1 {
 .chart {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   height: 400px;
+  width: 100%;
   background-color: aliceblue;
   margin-left: 2%;
   margin-right: 2%;
   margin-top: 2%;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -27,7 +29,7 @@ h1 {
   border-radius: 10px;
 }
 .chart-content {
-  width: 45%;
+  width: 40%;
   background: #fff;
   border: 1px solid #ccc;
   margin-bottom: 50px;
@@ -52,8 +54,8 @@ h1 {
   
 }
 .progress-skill{
-  background-color:rgb(110, 124, 121) ;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  background-color:rgb(122, 216, 253) ;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
  margin: 10px;
  padding: 100px;
 }
@@ -74,8 +76,10 @@ h1 {
   font-style: italic;
 }
 .progress-card h2{
-  font: bold;
-  color: #00f7ff;
+  font-weight: bold;
+  color: #fffb00;
+  text-transform: uppercase;
+
 }
 .top-head{
   font-size: 30px;
