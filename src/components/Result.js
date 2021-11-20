@@ -7,9 +7,9 @@ import Researchpic from "../Assets/undraw_logic_re_nyb4.svg";
 import Creativitypic from "../Assets/undraw_creativity_wqmm.svg";
 import Leaderpic from "../Assets/undraw_powerful_re_frhr.svg";
 import { Progress,ChakraProvider,Box } from "@chakra-ui/react";
-import { Center, Square, Circle } from "@chakra-ui/react"
-function Result() {
+import { Center, Square, Circle } from "@chakra-ui/react";
 
+function Result() {
     const data = [
         {
             name: 'Science',
